@@ -27,6 +27,7 @@ const useStyles = theme => ({
         }
     },
     loginBg: {
+        marginLeft: '70px',
         backgroundSize: 'cover',
         backgroundPosition: '50% center',
         height: '100vh',
@@ -134,13 +135,16 @@ class LoginPage extends Component{
                                 />
                                 </Box>
                                 <Box my='15px'>
-                                    <Button 
-                                        fullWidth='true'
-                                        type='submit' 
-                                        variant="contained" 
-                                        color="primary">
-                                        Login
-                                    </Button>
+                                <Router>
+                                    <Link to='/dashboard'>
+                                        <Button 
+                                            fullWidth='true'
+                                            variant='contained' 
+                                            color='primary'>
+                                            Login
+                                        </Button>
+                                    </Link>
+                                </Router>
                                 </Box>
                             </form>
                         
