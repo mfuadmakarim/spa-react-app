@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Icon from '@material-ui/core/Icon';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -10,6 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import LoginPage from './loginpage.component';
 import ProductPage from './productpage.component';
+import ProductList from './containers/ProductList';
 
 
 const useStyles = theme => ({
@@ -54,6 +55,7 @@ class App extends Component {
           <Switch>
             <Route path="/produk">
               <ProductPage />
+              <ProductList />
             </Route>
             <Route path="/">
               <LoginPage />

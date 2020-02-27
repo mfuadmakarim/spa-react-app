@@ -19,9 +19,10 @@ class ProductPage extends Component{
       }
 
     componentDidMount() {
-        axios.get('https://dev-wma-051.safanci.com/public/api/admin/modifier/r1?idAccount=1&token=2d820eb4de58f6799d98a865ca206bae')
+        axios.get('https://dev-wma-051.safanci.com/public/api/admin/modifier/r1?idAccount=1&token=AV9lHRev255XYmqs6ZjY8T4xSWs0oxInT63rDykFJK1ARmjH0iLhhCt57zox')
+        // .then(response => {console.log(response.data.response.arrProduct)})
             .then(response => this.setState({
-                items: response.data,
+                items: response.data.response.arrProduct,
                 isLoaded: true
             }))
             .catch(err => this.setState({
@@ -50,8 +51,8 @@ class ProductPage extends Component{
                 <div className={classes.root}>
                     <ul>
                         {items.map(item => (
-                            <li key={item.name}>
-                            {item.response.arrProduct.nmProduct} 
+                            <li key={item.idProduct}>
+                            {item.nmProduct} 
                             </li>
                         ))}
                     </ul>
