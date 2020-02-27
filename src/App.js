@@ -20,10 +20,14 @@ const useStyles = theme => ({
     top: '0',
     height: '100vh',
     width: '70px',
-    backgroundColor: '#fff',
+    backgroundColor: '#555',
     '&>ul': {
       listStyle: 'none',
-      paddingLeft: '0'
+      paddingLeft: '0',
+      '& > li > a': {
+        'color': '#fff',
+        'textDecoration': 'none'
+      }
     }
   }
 });
